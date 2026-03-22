@@ -4,11 +4,10 @@
   --onPrimary: #ffffff;
   --inversePrimary: #f4b2e3;
   --onSurface: #201a1e;
-  --outline: #80747b;
-  --tertiaryContainer: #FFDBCF;
-  --surfaceVariant: #EEDEE7;
-  --outlineVariant: #D2C2CB;
-
+  --outline: #380fef;
+  --tertiaryContainer: #ffdbcf;
+  --surfaceVariant: #eedee7;
+  --outlineVariant: #d2c2cb;
 }
 
 /* Svi elementi */
@@ -37,6 +36,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+header img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
 }
 
 header h2 {
@@ -86,35 +91,6 @@ section h1 {
   margin-bottom: 1rem;
 }
 
-/* aside */
-aside {
-  display: none;
-  background-color: var(--primary);
-  opacity: 0.8;
-  padding: 1rem;
-  position: absolute;
-  top: 112.5px;
-  right: 0;
-}
-
-aside ul {
-  list-style-type: none;
-}
-
-aside li {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-aside a {
-  color: var(--onPrimary);
-  text-decoration: none;
-}
-
-aside a:hover {
-  color: var(--inversePrimary);
-}
-
 /* hamburger */
 #hamburger-icon {
   display: none;
@@ -130,31 +106,28 @@ aside a:hover {
   margin: 6px 0;
 }
 
-
-
 /* Sirina ekrana manje od 899px */
 @media (max-width: 899px) {
   header nav ul {
-    display: none;
+    flex-direction: column;
   }
-  
-  aside {
-    display: inline-block;
+
+  header nav {
+    position: fixed;
+    top: 100px;
+    right: 0px;
+    background-color: var(--primary);
+    opacity: 0.8;
+    padding: 1rem;
+    margin-right: 0px;
+  }
+
+  header ul li:not(:first-child) {
+    margin-top: 0.5rem;
   }
 
   #hamburger-icon {
     display: inline-block;
     cursor: pointer;
-  }
-/* 
-  .table-col-hide {
-    display: none;
-  } */
-}
-
-/* Sakrij mobilni meni ako je ekran 900px ili vise */
-@media (min-width: 900px) {
-  aside {
-    display: none !important;
   }
 }

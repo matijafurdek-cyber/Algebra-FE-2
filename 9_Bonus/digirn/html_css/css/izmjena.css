@@ -41,7 +41,7 @@ input:active,
 input:focus,
 textarea:active,
 textarea:focus {
-  border: 2px solid var(--outline);
+  border: 1.5px solid var(--outline);
 }
 
 .container {
@@ -62,5 +62,3 @@ textarea:focus {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-
-
